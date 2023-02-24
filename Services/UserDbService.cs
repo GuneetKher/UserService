@@ -37,6 +37,7 @@ namespace UserService.Services
 
         public async Task UpdateUserAsync(string id, User user)
         {
+            user.Id = id;
             await _users.ReplaceOneAsync(u => u.Id == id, user);
         }
 
