@@ -45,5 +45,11 @@ namespace UserService.Services
         {
             await _users.DeleteOneAsync(u => u.Id == id);
         }
+
+        public async Task<User> GetUserByUsernameAsync(string username)
+        {
+            return await _users.Find<User>(user => user.Username == username).FirstOrDefaultAsync();
+
+        }
     }
 }

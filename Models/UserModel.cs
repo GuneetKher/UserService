@@ -19,7 +19,12 @@ namespace UserService.Models
     [BsonElement("email")]
     public string Email { get; set; }
 
-    [BsonElement("password")]
-    public string Password { get; set; }
-    }
+    [BsonElement("role")]
+    public string Role { get; set; }
+
+    [BsonElement("passwordhash")]
+    public byte[] PasswordHash { get; set; }
+    [BsonElement("passwordsalt")]
+    public byte[] PasswordSalt { get; set; }
+    }    
 }
