@@ -1,6 +1,10 @@
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
 WORKDIR /app
-EXPOSE 5167
+# # set the PORT environment variable
+# ENV PORT 5167
+
+# # expose the port
+# EXPOSE $PORT
 
 ENV ASPNETCORE_URLS=http://+:5167
 
